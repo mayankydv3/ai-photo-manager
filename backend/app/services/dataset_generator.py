@@ -3,6 +3,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
+from typing import Dict, Any
 
 from app.models import Photo, Person, Face, DuplicateGroup, SyncSource
 from app.services.scanner_service import LocalScannerService
