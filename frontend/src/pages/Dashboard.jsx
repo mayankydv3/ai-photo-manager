@@ -6,7 +6,7 @@ import {
   Users, 
   Trash2, 
   Sparkles, 
-  CloudSync, 
+  Cloud, 
   Cpu,
   FileText,
   Pill,
