@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CloudSync, HardDrive, CheckCircle, RefreshCw, ExternalLink, Folder, Lock } from 'lucide-react';
+import { Cloud, HardDrive, CheckCircle, RefreshCw, ExternalLink, Folder, Lock } from 'lucide-react';
 import { api } from '../services/api';
 
 export default function Connectors({ refreshData }) {
@@ -42,7 +42,7 @@ export default function Connectors({ refreshData }) {
       {/* Header */}
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex items-center gap-4">
         <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
-          <CloudSync className="w-6 h-6" />
+          <Cloud className="w-6 h-6" />
         </div>
         <div>
           <h1 className="text-xl font-bold text-slate-100">Storage Connectors & Sync Engine</h1>
@@ -108,7 +108,7 @@ export default function Connectors({ refreshData }) {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <CloudSync className="w-5 h-5 text-cyan-400" />
+                <Cloud className="w-5 h-5 text-cyan-400" />
                 <h2 className="font-bold text-sm text-slate-200">Google Photos REST API</h2>
               </div>
               <span className="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 font-bold text-[10px] uppercase">
