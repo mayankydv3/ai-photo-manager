@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = '/api/v1';
+const API_BASE = 'https://ai-photo-manager.onrender.com/api/v1';
 
 export const api = {
   // Stats
