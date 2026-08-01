@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: smartphoto-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/storage:/app/storage
+      - ./backend/smartphoto.db:/app/smartphoto.db
+    environment:
+      - APP_NAME=SmartPhoto AI
+      - DATABASE_URL=sqlite:///./smartphoto.db
+      - NEAR_DUPLICATE_PHASH_THRESHOLD=10
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: smartphoto-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "SmartPhoto AI API Collection",
+    "description": "Postman API Collection for SmartPhoto AI platform endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "System Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/stats/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "stats", ""] }
+      }
+    },
+    {
+      "name": "List Photos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/photos/?limit=50", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "photos", ""], "query": [{ "key": "limit", "value": "50" }] }
+      }
+    },
+    {
+      "name": "Natural Language Search",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"doctor prescriptions from last month\",\n  \"limit\": 50\n}"
+        },
+        "url": { "raw": "http://localhost:8000/api/v1/search/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "search", ""] }
+      }
+    },
+    {
+      "name": "Duplicate Groups",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/duplicates/groups", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "duplicates", "groups"] }
+      }
+    },
+    {
+      "name": "Categories Overview",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/categories/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "categories", ""] }
+      }
+    },
+    {
+      "name": "People & Faces",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/faces/people", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "faces", "people"] }
+      }
+    },
+    {
+      "name": "Seed 100,000 Photo Dataset",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": { "raw": "http://localhost:8000/api/v1/connectors/seed-dataset?scale_100k=true", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "connectors", "seed-dataset"], "query": [{ "key": "scale_100k", "value": "true" }] }
+      }
+    }
+  ]
+}
