@@ -5,7 +5,7 @@ import {
   CopyCheck, 
   FolderSearch, 
   Users, 
-  CloudSync, 
+  Cloud, 
   Sparkles,
   FileText,
   Pill,
@@ -21,7 +21,7 @@ export default function Sidebar({ activePage, setActivePage, stats }) {
     { id: 'duplicates', label: 'Duplicate Cleaner', icon: CopyCheck, count: stats?.duplicate_photos_count, badgeColor: 'bg-amber-500/20 text-amber-400' },
     { id: 'categories', label: 'Smart Categories', icon: FolderSearch },
     { id: 'people', label: 'People & Faces', icon: Users, count: stats?.total_people },
-    { id: 'connectors', label: 'Storage & Sync', icon: CloudSync },
+    { id: 'connectors', label: 'Storage & Sync', icon: Cloud },
   ];
 
   const quickCategories = [
