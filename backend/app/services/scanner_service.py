@@ -11,6 +11,7 @@ from app.services.ai_categorizer import AICategorizer
 from app.services.face_engine import FaceEngine
 from app.services.search_engine import SearchEngine
 from app.config import settings
+from typing import Any, Dict, Optional
 
 class LocalScannerService:
     SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
